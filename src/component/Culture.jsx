@@ -139,20 +139,26 @@ function Culture() {
     },
   ];
 
-  const [selectedSign, setSelectedSign] = useState('Your earthSign');
+  const [selectedSign, setSelectedSign] = useState('Astrological sign');
   const [random] = useState(Math.floor(Math.random() * movies.length));
 
   return (
     <section className="culture">
       <div className="culture_Movies">
         <h2>Our favorite movies</h2>
-        <div>
-          <h3>Title: &quot;{movies[random].name}&quot;</h3>
-          <img src={movies[random].url} alt={movies[random].name} />
-          <p>
-            <strong>Plot:</strong> <br />
-            {movies[random].plot}
-          </p>
+        <div id="cultureContainer">
+          <div id="slider">
+            {movies.map((item) => (
+              <figure key={item.name + item.id}>
+                <h3>Title: &quot;{item.name}&quot;</h3>
+                <img src={item.url} alt={item.name} />
+                <p>
+                  <strong>Plot:</strong> <br />
+                  {item.plot}
+                </p>
+              </figure>
+            ))}
+          </div>
         </div>
       </div>
       <div className="culture_Horoscope">
