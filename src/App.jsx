@@ -1,5 +1,6 @@
 import React from 'react';
 import './Uranus.css';
+import Header from './component/Header';
 import Culture from './component/Culture.jsx';
 import Journal from './component/journal';
 import './Mars.css';
@@ -10,6 +11,7 @@ import './App.css';
 function App() {
   return (
     <div>
+      <Header />
       <Culture />
       {/* <Journal semaine={['lundi', '2021/05/03']} />
       <Journal semaine={['mardi', '2021/05/04']} />
