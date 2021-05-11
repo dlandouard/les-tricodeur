@@ -140,8 +140,7 @@ function Culture() {
   ];
 
   const [selectedSign, setSelectedSign] = useState('Your earthSign');
-
-  const random = Math.floor(Math.random() * movies.length);
+  const [random] = useState(Math.floor(Math.random() * movies.length));
 
   return (
     <section className="culture">
@@ -150,11 +149,14 @@ function Culture() {
         <div>
           <h3>Title: &quot;{movies[random].name}&quot;</h3>
           <img src={movies[random].url} alt={movies[random].name} />
-          <p>Plot: {movies[random].plot}</p>
+          <p>
+            <strong>Plot:</strong> <br />
+            {movies[random].plot}
+          </p>
         </div>
       </div>
       <div className="culture_Horoscope">
-        <h2>Horoscope du jour</h2>
+        <h2>Daily horoscope</h2>
         <select
           id="signSelect"
           value={selectedSign}
@@ -167,17 +169,21 @@ function Culture() {
             </option>
           ))}
         </select>
-        {astro
-          .filter((item) => item.earthSign.includes(selectedSign))
-          .map((item) => (
-            <div key={item.sign + item.id} className="culture_sign">
-              <h3>
-                Robot astrological sign: {item.sign} &#40;corresponds to {item.earthSign} for Earth people&#41;
-              </h3>
-              <img src={item.url} alt={item.name} />
-              <p>{item.horoscope}</p>
-            </div>
-          ))}
+        {selectedSign === 'Astrological sign' ? (
+          <p>Select your Sign</p>
+        ) : (
+          astro
+            .filter((item) => item.earthSign.includes(selectedSign))
+            .map((item) => (
+              <div key={item.sign + item.id} className="culture_sign">
+                <div>
+                  <h3>Robot astrological sign: {item.sign}</h3>
+                  <img src={item.url} alt={item.name} />
+                </div>
+                <p>{item.horoscope}</p>
+              </div>
+            ))
+        )}
       </div>
     </section>
   );
