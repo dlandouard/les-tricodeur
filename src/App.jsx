@@ -2,12 +2,9 @@ import React from 'react';
 import './Uranus.css';
 import Culture from './component/Culture.jsx';
 import Journal from './component/journal';
-<<<<<<< HEAD
+import Meteo from './component/Meteo';
 import ALaUne from './component/ALaUne';
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
-
-=======
->>>>>>> dev
 import './Mars.css';
 import Robot from './component/Robot';
 
