@@ -26,6 +26,7 @@
 .meteoAll {
     background-image: url('./src/ciel-etoile.jpg');
     height: 100%;
+    padding: 1rem 0 2.5rem 0;
 }
 
 .meteoRover {

@@ -5,11 +5,11 @@
 }
 
 .culture {
-  margin-top: 10vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding-bottom: 2.5rem;
 }
 .culture h2 {
   padding: 1rem;
@@ -22,7 +22,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 0 1rem;
+  padding: 0 1rem 1rem 0;;
   margin: 1rem;
   color: white;
 }
@@ -33,11 +33,6 @@
   background: url(./ciel-etoile.jpg) no-repeat;
   border-radius: 5px;
 }
-
-/* .culture_Movies p {
-  text-align: justify;
-  background: black;
-} */
 
 #slider {
   width: 600%;
@@ -64,6 +59,7 @@
 #slider figure > p {
   background-color: rgba(2, 0, 50, 0.8);
   width: 85%;
+  text-align: justify;
 }
 
 @keyframes slidy {
@@ -146,6 +142,11 @@
   border-radius: 5px;
 }
 
+.headerContainer{
+position: relative;
+height: 13vh;
+}
+
 #mars{
     position: absolute;
     top: 0;
@@ -158,4 +159,24 @@
     width: 57%;
     top: 0;
     left: 22.5%;
+}
+
+#NavMenu {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    bottom: 0;
+    background: white;
+    width: 100%;
+    height: 5vh;
+    z-index: 100;
+}
+
+#menuContent{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    cursor: pointer;
 }
