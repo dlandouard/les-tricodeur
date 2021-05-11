@@ -6,7 +6,7 @@
 .robotContainer {
   background-image: url('./src/ciel-etoile.jpg');
   background-attachment: fixed;
-  height: 100vh;
+  height: 100%;
 }
 
 .robotDescription {
