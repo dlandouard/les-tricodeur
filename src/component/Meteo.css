@@ -25,7 +25,16 @@
 
 .meteoAll {
     background-image: url('./src/ciel-etoile.jpg');
-    height: 100vh;
+    height: 100%;
+}
+
+.meteoRover {
+    width: 90%;
+}
+
+.meteoEncadre {
+    display: flex;
+    justify-content: center;
 }
 
 @media screen and (min-width: 1024px) {
@@ -36,5 +45,13 @@
 
     .meteoContainer, .meteoContainerOne {
         border-radius: 75px;
+    }
+
+    .meteoTemp {
+        font-size: 30px;
+    }
+
+    .meteoTest {
+        font-size: 35px;
     }
 }

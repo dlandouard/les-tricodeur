@@ -18,8 +18,8 @@ function App() {
       <Journal semaine={['vendredi', '2021/05/07']} />
       <Journal semaine={['samedi', '2021/05/08']} />
       <Journal semaine={['dimanche', '2021/05/09']} />
-      <Robot /> 
-  <Meteo />*/}
+  <Robot /> */}
+  <Meteo />
     </div>
   );
 }
