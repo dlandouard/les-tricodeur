@@ -1,12 +1,19 @@
 import React from 'react';
+<<<<<<< HEAD
 import Journal from './component/journal'
 
 import logo from './logo.png';
 import './Mars.css';
+=======
+import Robot from './component/Robot'
+
+import './App.css';
+>>>>>>> dev
 
 function App() {
 
   return (
+<<<<<<< HEAD
    <div>
      <Journal semaine = {["lundi", "2021/05/03"]} />
      <Journal semaine = {["mardi", "2021/05/04"]} />
@@ -17,6 +24,12 @@ function App() {
      <Journal semaine = {["dimanche", "2021/05/09"]} />
    </div>
   );
+=======
+   <main>
+      <Robot />
+   </main>
+  )
+>>>>>>> dev
 }
 
 export default App;
