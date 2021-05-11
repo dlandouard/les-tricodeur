@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.journalTitre {
+  margin-top: 20px;
+}
+
+.journalImage {
+  width: 50%;
+}
+
+.journalMessage {
+  width: 85%;
+  text-align: center;
+  font-size: 18px;
+}
+
+.journalDate {
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+
+.journalContenair, .journalContenairLoad {
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  height: 50vh;
+  background-image: radial-gradient(white, black);
+}
+
+.journalContenairLoad{
+   justify-content: center;
+}
+
+.journalChargement {
+  text-align: center;
+}
+
+.journalDance {
+  width: 50%;
+}

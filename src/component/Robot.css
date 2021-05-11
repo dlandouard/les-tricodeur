@@ -1,0 +1,44 @@
+.robotPerseverance {
+  width: 90vw;
+  margin-top: 7%;
+}
+
+.robotContainer {
+  background-image: url('./src/ciel-etoile.jpg');
+  background-attachment: fixed;
+  height: 100vh;
+}
+
+.robotDescription {
+  text-align: center;
+  width: 70vw;
+  color: white;
+  margin-top: 3%;
+  font-size: 18px;
+}
+
+.robotAvatar {
+  width: 15vw;
+}
+
+.robotFlex {
+  display: flex;
+  flex-direction: row-reverse;
+  width: 90vw;
+}
+
+.robotDamien {
+  color: white;
+}
+
+.robotFigure {
+  text-align: center;
+}
+
+.robotAlign {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+
