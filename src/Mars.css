@@ -4,6 +4,25 @@
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+  margin: auto;
+  width: 50%;
+  text-align: center;
+  box-shadow: inset 0px 34px 0px -15px #b54b3a;
+  background-color: #a73f2d;
+  border: 1px solid #241d13;
+  display: block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 9px 23px;
+  text-decoration: none;
+  text-shadow: 0px -1px 0px #7a2a1d;
+}
+
 .journalTitre {
   margin-top: 20px;
 }
@@ -23,7 +42,8 @@
   margin-bottom: 20px;
 }
 
-.journalContenair, .journalContenairLoad {
+.journalContenair,
+.journalContenairLoad {
   display: flex;
   flex-flow: column;
   width: 100%;
@@ -31,11 +51,17 @@
   align-items: center;
   height: 50vh;
   background-image: url('./src/ciel-etoile.jpg');
-  color: white;
+  background-attachment: fixed;
 }
 
-.journalContenairLoad{
-   justify-content: center;
+.journalContenairLoad {
+  justify-content: center;
+}
+
+.journalContenair {
+  border: 1mm solid rgba(255, 255, 255, 0.6);
+  border-radius: 20px;
+  margin: 15px 0 0 0;
 }
 
 .journalChargement {
@@ -44,4 +70,10 @@
 
 .journalDance {
   width: 50%;
+}
+
+.ALaUnebackgroung {
+  background-image: url('./src/ciel-etoile.jpg');
+  background-attachment: fixed;
+  color: white;
 }

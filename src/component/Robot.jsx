@@ -1,36 +1,30 @@
 import React from 'react';
 import './Robot.css';
 
-function Robot() {
-    return (
-        <div className='robotContainer'>
-            <section className='robotAlign'>
-                <img src="./src/perseverance-NASA-.jpg" className='robotPerseverance' />
-                <section className='robotFlex'>
-                    <p className='robotDescription'>Perseverance, nicknamed Percy, is a car-sized Mars rover designed to explore the Jezero crater on Mars as part of NASA's Mars 2020 mission.</p>
-                    <figure className="robotFigure">
-                        <img src="https://robohash.org/alien" className='robotAvatar' />
-                        <figcaption className='robotDamien'>
-                            Avatar de Perseverance
-                        </figcaption>
-                    </figure>
-                </section>
-            </section>
-            <section className='robotAlign'>
-                <img src="./src/ingenuity.jpg" className='robotPerseverance' />
-                <section className='robotFlex'>
+function Robot(props) {
+  const backPage = () => {
+    window.history.back();
+  };
 
-                    <p className='robotDescription'>Ingenuity is a small robotic solar helicopter operating on Mars as part of NASA's Mars 2020 mission.</p>
-                    <figure className="robotFigure">
-                        <img src="https://robohash.org/robot" className='robotAvatar' />
-                        <figcaption className='robotDamien'>
-                            Avatar de ingenuity
-                        </figcaption>
-                    </figure>
-                </section>
-            </section>
-        </div>
-    )
+  console.log(props);
+
+  return (
+    <div className="robotContainer">
+      <section className="robotAlign">
+        <img src={props.image} className="robotPerseverance" />
+        <section className="robotFlex">
+          <p className="robotDescription">{props.description}</p>
+          <figure className="robotFigure">
+            <img src={props.robot} className="robotAvatar" />
+            <figcaption className="robotDamien">{props.avatar}</figcaption>
+          </figure>
+        </section>
+      </section>
+      <button className={props.end ? 'robotBackpage' : 'robotBackpageoff'} onClick={backPage}>
+        retour
+      </button>
+    </div>
+  );
 }
 
-export default Robot
+export default Robot;
