@@ -12,11 +12,10 @@
   justify-content: center;
 }
 .culture h2 {
-    padding: 1rem;
+  padding: 1rem;
 }
 
 .culture_Movies,
-.culture_Movies div,
 .culture_Horoscope,
 .culture_sign {
   display: flex;
@@ -31,20 +30,84 @@
 .culture_Movies,
 .culture_Horoscope {
   padding-top: 2em;
-  background: url(./ciel-etoile.jpg);
+  background: url(./ciel-etoile.jpg) no-repeat;
   border-radius: 5px;
 }
 
-.culture_Movies p {
+/* .culture_Movies p {
   text-align: justify;
   background: black;
+} */
+
+#slider {
+  width: 600%;
+  animation-duration: 30s;
+  animation-name: slidy;
+  animation-iteration-count: infinite;
+  display: flex;
 }
 
+#cultureContainer {
+  width: 80vw;
+  overflow: hidden;
+}
+
+#slider figure {
+    width: 17%;
+    margin: 0;
+    padding: 0;
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    text-align:center;
+  }
+#slider figure>p{
+    background-color: rgba(2, 0, 50, 0.8);
+    width:85%;
+  }
+
+@keyframes slidy {
+  0% {
+    transform:translateX(0vw);
+  }
+  8.33% {
+    transform:translateX(0vw);
+  }
+  16.66% {
+    transform:translateX(-80vw);
+  }
+  25% {
+    transform:translateX(-80vw);
+  }
+  33.33% {
+    transform:translateX(-160vw);
+  }
+  41.67% {
+    transform:translateX(-160vw);
+  }
+  50% {
+    transform:translateX(-240vw);
+  }
+  58.33% {
+    transform:translateX(-240vw);
+  }
+  66.67% {
+    transform:translateX(-320vw);
+  }
+  75% {
+    transform:translateX(-320vw);
+  }
+  83.33% {
+    transform:translateX(-400vw);
+  }
+  91.67% {
+    transform:translateX(-400vw);
+  }
+}
 .culture_Horoscope,
 .culture_sign {
   width: 95%;
 }
-
 .culture_sign div {
   display: flex;
   justify-content: space-between;
