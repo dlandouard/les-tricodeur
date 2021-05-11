@@ -1,0 +1,57 @@
+.meteoTest {
+    text-align: center;
+}
+
+.meteoFlex {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 2%; 
+}
+
+.meteoContainer, .meteoContainerOne {
+    background-color: rgba(3, 0, 99, 0.8);
+    color: white;
+    padding: 1% 0;
+    border-radius: 50px;
+}
+
+.meteoContainer {
+    margin-top: 5%;
+}
+
+.meteoContainerOne {
+    margin-top: 10%;
+} 
+
+.meteoAll {
+    background-image: url('./src/ciel-etoile.jpg');
+    height: 100%;
+}
+
+.meteoRover {
+    width: 90%;
+}
+
+.meteoEncadre {
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (min-width: 1024px) {
+    .meteoAll {
+        height: 100%;
+        background-size: cover;
+    }
+
+    .meteoContainer, .meteoContainerOne {
+        border-radius: 75px;
+    }
+
+    .meteoTemp {
+        font-size: 30px;
+    }
+
+    .meteoTest {
+        font-size: 35px;
+    }
+}
