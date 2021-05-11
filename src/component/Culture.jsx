@@ -140,7 +140,6 @@ function Culture() {
   ];
 
   const [selectedSign, setSelectedSign] = useState('Astrological sign');
-  const [random] = useState(Math.floor(Math.random() * movies.length));
 
   return (
     <section className="culture">
