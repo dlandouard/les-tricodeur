@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.culture {
+  margin-top: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.culture_Movies,
+.culture_Movies div,
+.culture_Horoscope,
+.culture_sign {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1rem;
+  margin: 1rem;
+}
+
+.culture_Movies {
+  margin: 2em;
+  
+}
+
+.culture_Horoscope,
+.culture_sign {
+  width: 100%;
+}
+
+.culture_sign h3 {
+  text-align: center;
+}
+.culture_sign img {
+    width: 25%;
+    text-align: center;
+  }
+
