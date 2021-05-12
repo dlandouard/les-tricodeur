@@ -13,7 +13,6 @@ import Robot from './component/Robot';
 import './App.css';
 
 function App() {
-
   const [maPorte, setMaPorte] = useState(false);
 
   const robotInfo = [
@@ -40,7 +39,7 @@ function App() {
       <Nav />
       <Switch>
         <Route exact path="/">
-          <ALaUne {...robotInfo} maPorte={maPorte}/>
+          <ALaUne {...robotInfo} maPorte={maPorte} />
         </Route>
         <Route path="/Culture">
           <Culture />

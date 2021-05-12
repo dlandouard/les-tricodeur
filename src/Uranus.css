@@ -149,6 +149,7 @@ a{
 .headerContainer {
   position: relative;
   height: 13vh;
+  width: 100%;
 }
 
 #mars {

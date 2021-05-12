@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Robot from './Robot';
 import Journal from './journal';
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
 function aLaUne(props) {
   const [detect, setDetect] = useState(true);
@@ -15,6 +16,25 @@ function aLaUne(props) {
     }
     return () => clearInterval(interval);
   }, [props.maPorte]);
+
+
+  const history = useHistory();
+  const [porte, setPorte] = useState(false);
+
+  useEffect(() => {
+    let interval;
+    if (porte) {
+      interval = setInterval(() => {
+        history.goBack();
+        props.setMaPorte(porte);
+      }, 2000);
+    }
+    return () => clearInterval(interval);
+  }, [porte]);
+
+  const backPage = () => {
+    setPorte(!porte);
+  };
 
   const semaine = [
     ['lundi', '2021/05/03'],
@@ -31,7 +51,7 @@ function aLaUne(props) {
     <div className="ALaUnebackgroung">
       <div className={detect ? 'porteActive3' : 'porteInacive'}></div>
       <div className={detect ? 'porteActive4' : 'porteInacive'}></div>
-      <Link id="ALaUneBouton" to="/Robot">
+      <Link onClick={backPage} id="ALaUneBouton" to="/Robot">
         Nos robots
       </Link>
       <div className="aLaUneResponsive">

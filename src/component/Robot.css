@@ -84,7 +84,9 @@
   top: 0;
   width: 50vw;
   height: 100%;
-  background-color: black;
+  background: url("https://www.comptoir-reliure.fr/442-large_default/aspect-metallique-perle-gris-fonce-laize-106cm.jpg");
+  background-repeat:no-repeat;
+  background-size: cover;
   animation-name: porte;
   animation-duration: 2s;
   animation-fill-mode: forwards;
@@ -97,7 +99,9 @@
   top: 0;
   width: 50vw;
   height: 100%;
-  background-color: black;
+  background: url("https://www.comptoir-reliure.fr/442-large_default/aspect-metallique-perle-gris-fonce-laize-106cm.jpg");
+  background-repeat:no-repeat;
+  background-size: cover;
   animation-name: porte2;
   animation-duration: 2s;
   animation-fill-mode: forwards;
@@ -111,7 +115,9 @@
   top: 0;
   width: 50vw;
   height: 100%;
-  background-color: black;
+  background: url("https://www.comptoir-reliure.fr/442-large_default/aspect-metallique-perle-gris-fonce-laize-106cm.jpg");
+  background-repeat:no-repeat;
+  background-size: cover;
   animation-name: porte3;
   animation-duration: 2s;
   animation-fill-mode: forwards;
@@ -124,7 +130,9 @@
   top: 0;
   width: 50vw;
   height: 100%;
-  background-color: black;
+  background: url("https://www.comptoir-reliure.fr/442-large_default/aspect-metallique-perle-gris-fonce-laize-106cm.jpg");
+  background-repeat:no-repeat;
+  background-size: cover;
   animation-name: porte4;
   animation-duration: 2s;
   animation-fill-mode: forwards;

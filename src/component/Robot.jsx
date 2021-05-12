@@ -26,6 +26,8 @@ function Robot(props) {
     <div className="robotContainer">
       <div className={porte ? 'porteActive' : 'porteInacive'}></div>
       <div className={porte ? 'porteActive2' : 'porteInacive'}></div>
+      <div className={props.detect ? 'porteActive3' : 'porteInacive'}></div>
+      <div className={props.detect ? 'porteActive4' : 'porteInacive'}></div>
       <section className="robotAlign">
         <img src={props.image} className="robotPerseverance" />
         <section className="robotFlex">
