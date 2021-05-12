@@ -15,7 +15,7 @@ function Nav() {
         Culture
       </Link>
       <Link className="navBackground" onClick={pageHaut} to="/Meteo">
-        Last week weather
+        Weather
       </Link>
     </nav>
   );
