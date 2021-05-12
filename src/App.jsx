@@ -9,6 +9,7 @@ import Nav from './component/Nav';
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 import './Mars.css';
 import Robot from './component/Robot';
+import Footer from './component/Footer';
 
 import './App.css';
 
@@ -53,6 +54,8 @@ function App() {
           ))}
         </Route>
       </Switch>
+      <Footer />
+      
     </div>
   );
 }

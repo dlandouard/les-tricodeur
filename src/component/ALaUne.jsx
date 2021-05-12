@@ -37,22 +37,21 @@ function aLaUne(props) {
   };
 
   const semaine = [
-    ['lundi', '2021/05/03'],
-    ['mardi', '2021/05/04'],
-    ['mercredi', '2021/05/05'],
-    ['jeudi', '2021/05/06'],
-    ['vendredi', '2021/05/07'],
-    ['samedi', '2021/05/08'],
-    ['dimanche', '2021/05/09'],
+    ['Monday', '2021/05/03'],
+    ['Tuesday', '2021/05/04'],
+    ['Wednesday', '2021/05/05'],
+    ['Thursday', '2021/05/06'],
+    ['Friday', '2021/05/07'],
+    ['Saturday', '2021/05/08'],
+    ['Sunday', '2021/05/09'],
   ];
   const donnee = [props[0], props[1]];
-  console.log(props.maPorte);
   return (
     <div className="ALaUnebackgroung">
       <div className={detect ? 'porteActive3' : 'porteInacive'}></div>
       <div className={detect ? 'porteActive4' : 'porteInacive'}></div>
-      <Link onClick={backPage} id="ALaUneBouton" to="/Robot">
-        Nos robots
+      <Link id="ALaUneBouton" to="/Robot">
+        Who are we ?
       </Link>
       <div className="aLaUneResponsive">
         {donnee.map((text) => (
