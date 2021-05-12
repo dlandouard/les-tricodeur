@@ -37,7 +37,7 @@ function App() {
       <Nav />
       <Switch>
         <Route exact path="/">
-          <ALaUne />
+          <ALaUne {...robotInfo}/>
         </Route>
         <Route path="/Culture">
           <Culture />

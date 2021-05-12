@@ -79,6 +79,10 @@
   padding: 0.5rem 0 2.5rem 0;
 }
 
+.aLaUneResponsive{
+  display: none;
+}
+
 @media screen and (min-width: 750px) {
   .journalContenair,
   .journalContenairLoad {
@@ -92,5 +96,11 @@
   }
   .journalDate {
     font-size: 20px;
+  }
+  .aLaUneResponsive{
+    display:block;
+  }
+  #ALaUneBouton {
+   display: none;
   }
 }

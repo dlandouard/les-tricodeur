@@ -3,7 +3,7 @@ import Robot from './Robot';
 import Journal from './journal';
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 
-function aLaUne() {
+function aLaUne(props) {
   const semaine = [
     ['lundi', '2021/05/03'],
     ['mardi', '2021/05/04'],
@@ -13,13 +13,19 @@ function aLaUne() {
     ['samedi', '2021/05/08'],
     ['dimanche', '2021/05/09'],
   ];
-
+  const donnee = [props]
+  // console.log(donnee);
   return (
     <div className="ALaUnebackgroung">
       <Link id="ALaUneBouton" to="/Robot">
         {' '}
         Nos robots{' '}
       </Link>
+      <div className="aLaUneResponsive">
+        {donnee.map((text) => (
+          <Robot {...text} />
+        ))}
+      </div>
       {semaine.map((text) => (
         <Journal semaine={text} />
       ))}
