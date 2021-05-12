@@ -1,7 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Orbitron:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Orbitron:wght@400;500;600;700;800;900&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: lato;
+}
+
+h1,
+h2 {
+  font-family: Orbitron;
 }
 
 a{
@@ -60,7 +70,14 @@ a{
   align-items: center;
   text-align: center;
 }
-#slider figure > p {
+
+#slider figure >div {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#slider figure > div > p {
   background-color: rgba(2, 0, 50, 0.8);
   width: 85%;
   text-align: justify;
@@ -149,6 +166,7 @@ a{
 .headerContainer {
   position: relative;
   height: 13vh;
+  background: radial-gradient(ellipse at center, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 10%, rgba(0, 3, 14) 100%);
 }
 
 #mars {
@@ -170,7 +188,7 @@ a{
   display: flex;
   align-items: center;
   bottom: 0;
-  background: black;
+  background: rgba(0, 0, 0, 0.8);
   width: 100%;
   height: 7vh;
   z-index: 100;
@@ -186,24 +204,52 @@ a{
 }
 
 .navBackground {
-  background: radial-gradient(ellipse at center, rgba(255, 255, 255, 1) 0%, rgba(0, 3, 14, 1) 85%, rgba(0, 3, 14) 100%);
+  background: radial-gradient(ellipse at center, rgba(255, 255, 255, 1) 0%, rgba(0, 3, 14, 1) 97%, rgba(0, 3, 14) 100%);
   width: 33.3333%;
   height: 5vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 25px;
+  font-size: 20px;
   color: black;
 }
 
 @media screen and (min-width: 750px) {
+  .headerContainer {
+    height: 13vh;
+  }
   #mars {
     left: 45.5%;
-    width: 13vh;
+    width: 13vw;
   }
   #titre {
-    width: 25%;
-    left: 37.8%;
+    width: 45%;
+    left: 32%;
+  }
+
+  #slider figure>div{
+    flex-direction: row;
+    width: 100%;
+  }
+  #slider figure>div>img{
+    width: 40%;
+    padding: 3rem;
+  }
+
+  #slider figure>div>p{
+    font-size: 0.8rem;
+  }
+
+  .culture_Horoscope {
+    width: 82%;
+  }
+
+  .culture_Horoscope img {
+    width: 20%;
+  }
+
+  .culture_sign div {
+    justify-content: space-around;
   }
   .navBackground:hover {
     transform: scale(1.2)
@@ -211,4 +257,41 @@ a{
     .navBackground {
       font-size: 40px;
     }
+}
+
+
+@media screen and (min-width: 1024px) {
+
+  #mars {
+    left: 45.5%;
+    width: 13vW;
+  }
+  #titre {
+    width: 18.4%;
+    left: 40%;
+  }
+  #slider figure>div{
+    flex-direction: row;
+    width: 80%;
+  }
+  #slider figure>div>*{
+    width: 50%;
+    padding: 3rem;
+  }
+
+  #slider figure>div>p{
+    font-size: 1rem;
+  }
+
+  .culture_Horoscope {
+    width: 82%;
+  }
+
+  .culture_Horoscope img {
+    width: 20%;
+  }
+
+  .culture_sign div {
+    justify-content: space-around;
+  }
 }
