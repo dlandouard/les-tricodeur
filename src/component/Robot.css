@@ -1,6 +1,6 @@
 .robotPerseverance {
   width: 90vw;
-  border-radius: 30px 30px 0 0 ;
+  border-radius: 30px 30px 0 0;
 }
 
 .robotContainer {
@@ -52,53 +52,128 @@
   border-radius: 30px;
 }
 
-.robotBackpage{
+.robotBackpage {
   display: block;
   margin: 10px;
-	box-shadow:inset 0px 34px 0px -15px #b54b3a;
-	background-color:#a73f2d;
-	border:1px solid #241d13;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-family:Arial;
-	font-size:15px;
-	font-weight:bold;
-	padding:9px 23px;
-	text-decoration:none;
-	text-shadow:0px -1px 0px #7a2a1d;
+  box-shadow: inset 0px 34px 0px -15px #b54b3a;
+  background-color: #a73f2d;
+  border: 1px solid #241d13;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 9px 23px;
+  text-decoration: none;
+  text-shadow: 0px -1px 0px #7a2a1d;
 }
 
 .robotBackpage:hover {
-	background-color:#b34332;
+  background-color: #b34332;
 }
 
-.robotBackpageoff{
+.robotBackpageoff {
   display: none;
 }
 
-.porteActive{
-   display: block;
-   position: fixed;
-   left: -50%;
-   top : 0;
-   width: 50vw;
-   height: 100%;
-   background-color: black;
-   animation-name: porte;
-   animation-duration: 3s;
-   animation-fill-mode: forwards;
+.porteActive {
+  display: block;
+  position: fixed;
+  left: -50%;
+  top: 0;
+  width: 50vw;
+  height: 100%;
+  background-color: black;
+  animation-name: porte;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  z-index: 1000;
+}
+.porteActive2 {
+  display: block;
+  position: fixed;
+  right: -50%;
+  top: 0;
+  width: 50vw;
+  height: 100%;
+  background-color: black;
+  animation-name: porte2;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  z-index: 1000;
 }
 
-.porteInactive{
-display: none;
+.porteActive3 {
+  display: block;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 50vw;
+  height: 100%;
+  background-color: black;
+  animation-name: porte3;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  z-index: 1000;
+}
+.porteActive4 {
+  display: block;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 50vw;
+  height: 100%;
+  background-color: black;
+  animation-name: porte4;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  z-index: 1000;
+}
+
+
+.porteInactive {
+  display: none;
 }
 
 @keyframes porte {
-  0% { left: -50%; }
-  /* 20% { left: -40%; }
-  40% { left: -30%; }
-  60% { left: -20%; }
-  80% { left: -10%; } */
-  100% { left: 0; }
+  0% {
+    left: -50%;
+  }
+  100% {
+    left: 0;
+  }
+}
+
+@keyframes porte2 {
+  0% {
+    right: -50%;
+  }
+  100% {
+    right: 0;
+  }
+}
+
+@keyframes porte3 {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -50%;
+  }
+}
+
+@keyframes porte4 {
+  0% {
+    right: 0;
+  }
+  100% {
+    right: -50%;
+  }
+}
+
+@media screen and (min-width: 750px) {
+  .robotBackpage {
+    display: none;
+  }
 }
