@@ -78,3 +78,19 @@
   color: white;
   padding: 0.5rem 0 2.5rem 0;
 }
+
+@media screen and (min-width: 750px) {
+  .journalContenair,
+  .journalContenairLoad {
+    width: 80vw;
+    margin: 15px auto auto auto;
+    height: 90vh;
+  }
+
+  .journalMessage {
+    font-size: 25px;
+  }
+  .journalDate {
+    font-size: 20px;
+  }
+}

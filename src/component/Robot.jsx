@@ -1,15 +1,24 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './Robot.css';
+import { useHistory } from 'react-router-dom';
 
 function Robot(props) {
+  const history = useHistory();
+  // const [porte, setPorte] = useState(false);
+
+  useEffect(() => {}, []);
+
   const backPage = () => {
-    window.history.back();
+  //   setPorte(!porte);
+  //   setInterval(function () {
+  //     setPorte(false);
+      history.goBack();
+  //   }, 3000);
   };
-
-  console.log(props);
-
+console.log()
   return (
     <div className="robotContainer">
+      {/* <div className={porte ? 'porteActive' : 'porteInacive'}></div> */}
       <section className="robotAlign">
         <img src={props.image} className="robotPerseverance" />
         <section className="robotFlex">

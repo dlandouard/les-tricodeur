@@ -2,6 +2,7 @@ import React from 'react';
 import './Uranus.css';
 import Header from './component/Header';
 import Culture from './component/Culture.jsx';
+import Journal from './component/journal';
 import Meteo from './component/Meteo';
 import ALaUne from './component/ALaUne';
 import Nav from './component/Nav';
