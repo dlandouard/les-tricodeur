@@ -4,9 +4,9 @@
   box-sizing: border-box;
 }
 
-a {
+#ALaUneBouton {
   text-decoration: none;
-  margin: auto;
+  margin: 1em auto;
   width: 50%;
   text-align: center;
   box-shadow: inset 0px 34px 0px -15px #b54b3a;
@@ -76,4 +76,5 @@ a {
   background-image: url('./src/ciel-etoile.jpg');
   background-attachment: fixed;
   color: white;
+  padding: 0.5rem 0 2.5rem 0;
 }

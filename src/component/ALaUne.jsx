@@ -1,7 +1,7 @@
 import React from 'react';
 import Robot from './Robot';
 import Journal from './journal';
-import { BrowserRouter as Router, Route, Switch, Link} from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 
 function aLaUne() {
   const semaine = [
@@ -16,7 +16,10 @@ function aLaUne() {
 
   return (
     <div className="ALaUnebackgroung">
-      <Link to="/Robot"> Nos robots </Link>
+      <Link id="ALaUneBouton" to="/Robot">
+        {' '}
+        Nos robots{' '}
+      </Link>
       {semaine.map((text) => (
         <Journal semaine={text} />
       ))}
