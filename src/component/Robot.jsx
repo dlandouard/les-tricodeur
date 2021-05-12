@@ -15,6 +15,7 @@ function Robot(props) {
       history.goBack();
   //   }, 3000);
   };
+  console.log(props)
 console.log()
   return (
     <div className="robotContainer">
