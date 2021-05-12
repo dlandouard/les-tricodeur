@@ -25,12 +25,17 @@
 
 .meteoAll {
     background-image: url('./src/ciel-etoile.jpg');
+    background-size: cover;
     height: 100%;
     padding: 1rem 0 2.5rem 0;
 }
 
 .meteoRover {
     width: 90%;
+}
+
+.ingenuityMeteo {
+    margin-top: 2rem;
 }
 
 .meteoEncadre {

@@ -181,6 +181,7 @@
   list-style: none;
   cursor: pointer;
 }
+
 @media screen and (min-width: 750px) {
   #mars {
     left: 45.5%;
