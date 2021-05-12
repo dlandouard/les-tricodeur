@@ -8,23 +8,15 @@ function Nav() {
 
   return (
     <nav id="NavMenu">
-      <ul id="menuContent">
-        <li>
-          <Link onClick={pageHaut} to="/">
-            A la une
-          </Link>
-        </li>
-        <li>
-          <Link onClick={pageHaut} to="/Culture">
-            Culture
-          </Link>
-        </li>
-        <li>
-          <Link onClick={pageHaut} to="/Meteo">
-            Meteo
-          </Link>
-        </li>
-      </ul>
+      <Link className="navBackground" onClick={pageHaut} to="/">
+        In the News
+      </Link>
+      <Link className="navBackground" onClick={pageHaut} to="/Culture">
+        Culture
+      </Link>
+      <Link className="navBackground" onClick={pageHaut} to="/Meteo">
+        Weather
+      </Link>
     </nav>
   );
 }

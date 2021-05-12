@@ -150,11 +150,13 @@ function Culture() {
             {movies.map((item) => (
               <figure key={item.name + item.id}>
                 <h3>Title: &quot;{item.name}&quot;</h3>
-                <img src={item.url} alt={item.name} />
-                <p>
-                  <strong>Plot:</strong> <br />
-                  {item.plot}
-                </p>
+                <div>
+                  <img src={item.url} alt={item.name} />
+                  <p>
+                    <strong>Plot:</strong> <br />
+                    {item.plot}
+                  </p>
+                </div>
               </figure>
             ))}
           </div>

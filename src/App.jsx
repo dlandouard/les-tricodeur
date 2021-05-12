@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './Uranus.css';
 import Header from './component/Header';
 import Culture from './component/Culture.jsx';
@@ -14,6 +14,9 @@ import Footer from './component/Footer';
 import './App.css';
 
 function App() {
+
+  const [maPorte, setMaPorte] = useState(false);
+
   const robotInfo = [
     {
       image: './src/perseverance-NASA-.jpg',
@@ -38,7 +41,7 @@ function App() {
       <Nav />
       <Switch>
         <Route exact path="/">
-          <ALaUne {...robotInfo}/>
+          <ALaUne {...robotInfo} maPorte={maPorte}/>
         </Route>
         <Route path="/Culture">
           <Culture />
@@ -48,7 +51,7 @@ function App() {
         </Route>
         <Route path="/Robot">
           {robotInfo.map((text) => (
-            <Robot {...text} />
+            <Robot {...text} setMaPorte={setMaPorte} />
           ))}
         </Route>
       </Switch>
