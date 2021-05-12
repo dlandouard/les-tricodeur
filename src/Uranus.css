@@ -145,6 +145,7 @@
 .headerContainer {
   position: relative;
   height: 13vh;
+  background: radial-gradient(ellipse at center, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 10%, rgba(0, 3, 14) 100%);
 }
 
 #mars {

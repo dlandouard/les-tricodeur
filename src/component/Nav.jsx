@@ -11,7 +11,7 @@ function Nav() {
       <ul id="menuContent">
         <li>
           <Link onClick={pageHaut} to="/">
-            A la une
+            In the news
           </Link>
         </li>
         <li>
@@ -21,7 +21,7 @@ function Nav() {
         </li>
         <li>
           <Link onClick={pageHaut} to="/Meteo">
-            Meteo
+            Last week weather
           </Link>
         </li>
       </ul>
