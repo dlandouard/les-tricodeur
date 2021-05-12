@@ -4,12 +4,12 @@ function Journal(props) {
   const [info, setInfo] = useState({});
   const [active, setActive] = useState(false);
   const message = [
-    "aujourd'hui visite des dune avec du sable",
-    "aujourd'hui visite des dune avec des cailloux",
-    "aujourd'hui visite des dune avec du sable et des cailloux",
-    "aujourd'hui visite d'un cratére avec du sable",
-    "aujourd'hui visite d'un cratére avec des cailloux",
-    "aujourd'hui visite d'un cratére avec du sable et des cailloux",
+    'Today, visit of the dunes, we saw some sand.',
+    'Today, visit the dunes, we saw some sand and rocks.',
+    'Today, visit the dunes, we saw some rocks.',
+    'Today, visit a crater, we saw some sand.',
+    'Today, visit a crater, we saw some rocks.',
+    'Today, visit a crater, we saw some sand and rocks.',
   ];
   let random = Math.floor(Math.random() * message.length);
   let random2 = Math.floor(Math.random() * info.length);
@@ -31,7 +31,10 @@ function Journal(props) {
         <div className="journalContenair">
           <h1 className="journalTitre">{props.semaine[0]}</h1>
           <img className="journalImage" src={info[random2]} alt={info.length} />
-          <p className="journalMessage">message du jour : {message[random]} </p>
+          <p className="journalMessage">
+            <strong>Daily message :</strong>
+            {message[random]}{' '}
+          </p>
           <h2 className="journalDate">{props.semaine[1]}</h2>
         </div>
       )}

@@ -1,20 +1,26 @@
 .robotPerseverance {
   width: 90vw;
-  margin-top: 7%;
+  border-radius: 30px 30px 0 0;
 }
 
 .robotContainer {
   background-image: url('./src/ciel-etoile.jpg');
   background-attachment: fixed;
-  height: 100%;
+  height: fit-content;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  padding-bottom: 2.5rem;
 }
 
 .robotDescription {
   text-align: center;
-  width: 70vw;
   color: white;
-  margin-top: 3%;
   font-size: 18px;
+  padding: 8px;
+  height: 140px;
+  display: flex;
+  align-items: center;
 }
 
 .robotAvatar {
@@ -25,6 +31,7 @@
   display: flex;
   flex-direction: row-reverse;
   width: 90vw;
+  align-items: center;
 }
 
 .robotDamien {
@@ -39,6 +46,141 @@
   display: flex;
   align-items: center;
   flex-direction: column;
+  background-color: rgba(2, 0, 50, 0.8);
+  margin-top: 7%;
+  border-radius: 30px;
+}
+
+.robotBackpage {
+  display: block;
+  margin: 10px;
+  box-shadow: inset 0px 34px 0px -15px #b54b3a;
+  background-color: #a73f2d;
+  border: 1px solid #241d13;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 9px 23px;
+  text-decoration: none;
+  text-shadow: 0px -1px 0px #7a2a1d;
+}
+
+.robotBackpage:hover {
+  background-color: #b34332;
+}
+
+.robotBackpageoff {
+  display: none;
+}
+
+.porteActive {
+  display: block;
+  position: fixed;
+  left: -50%;
+  top: 0;
+  width: 50vw;
+  height: 100%;
+  background: url("https://www.comptoir-reliure.fr/442-large_default/aspect-metallique-perle-gris-fonce-laize-106cm.jpg");
+  background-repeat:no-repeat;
+  background-size: cover;
+  animation-name: porte;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  z-index: 1000;
+}
+.porteActive2 {
+  display: block;
+  position: fixed;
+  right: -50%;
+  top: 0;
+  width: 50vw;
+  height: 100%;
+  background: url("https://www.comptoir-reliure.fr/442-large_default/aspect-metallique-perle-gris-fonce-laize-106cm.jpg");
+  background-repeat:no-repeat;
+  background-size: cover;
+  animation-name: porte2;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  z-index: 1000;
+}
+
+.porteActive3 {
+  display: block;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 50vw;
+  height: 100%;
+  background: url("https://www.comptoir-reliure.fr/442-large_default/aspect-metallique-perle-gris-fonce-laize-106cm.jpg");
+  background-repeat:no-repeat;
+  background-size: cover;
+  animation-name: porte3;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  z-index: 1000;
+}
+.porteActive4 {
+  display: block;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 50vw;
+  height: 100%;
+  background: url("https://www.comptoir-reliure.fr/442-large_default/aspect-metallique-perle-gris-fonce-laize-106cm.jpg");
+  background-repeat:no-repeat;
+  background-size: cover;
+  animation-name: porte4;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  z-index: 1000;
 }
 
 
+.porteInactive {
+  display: none;
+}
+
+@keyframes porte {
+  0% {
+    left: -50%;
+  }
+  100% {
+    left: 0;
+  }
+}
+
+@keyframes porte2 {
+  0% {
+    right: -50%;
+  }
+  100% {
+    right: 0;
+  }
+}
+
+@keyframes porte3 {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -50%;
+  }
+}
+
+@keyframes porte4 {
+  0% {
+    right: 0;
+  }
+  100% {
+    right: -50%;
+  }
+}
+
+@media screen and (min-width: 750px) {
+  .robotBackpage {
+    display: none;
+  }
+}

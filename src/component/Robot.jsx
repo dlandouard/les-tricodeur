@@ -1,36 +1,48 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './Robot.css';
+import { useHistory } from 'react-router-dom';
 
-function Robot() {
-    return (
-        <div className='robotContainer'>
-            <section className='robotAlign'>
-                <img src="./src/perseverance-NASA-.jpg" className='robotPerseverance' />
-                <section className='robotFlex'>
-                    <p className='robotDescription'>Perseverance, nicknamed Percy, is a car-sized Mars rover designed to explore the Jezero crater on Mars as part of NASA's Mars 2020 mission.</p>
-                    <figure className="robotFigure">
-                        <img src="https://robohash.org/alien" className='robotAvatar' />
-                        <figcaption className='robotDamien'>
-                            Avatar de Perseverance
-                        </figcaption>
-                    </figure>
-                </section>
-            </section>
-            <section className='robotAlign'>
-                <img src="./src/ingenuity.jpg" className='robotPerseverance' />
-                <section className='robotFlex'>
+function Robot(props) {
+  const history = useHistory();
+  const [porte, setPorte] = useState(false);
 
-                    <p className='robotDescription'>Ingenuity is a small robotic solar helicopter operating on Mars as part of NASA's Mars 2020 mission.</p>
-                    <figure className="robotFigure">
-                        <img src="https://robohash.org/robot" className='robotAvatar' />
-                        <figcaption className='robotDamien'>
-                            Avatar de ingenuity
-                        </figcaption>
-                    </figure>
-                </section>
-            </section>
-        </div>
-    )
+  useEffect(() => {
+    let interval;
+    if (porte) {
+      interval = setInterval(() => {
+        history.goBack();
+        props.setMaPorte(porte);
+      }, 2000);
+    }
+    return () => clearInterval(interval);
+  }, [porte]);
+
+  const backPage = () => {
+    setPorte(!porte);
+  };
+  console.log(props);
+  console.log(props.setMaPorte);
+  return (
+    <div className="robotContainer">
+      <div className={porte ? 'porteActive' : 'porteInacive'}></div>
+      <div className={porte ? 'porteActive2' : 'porteInacive'}></div>
+      <div className={props.detect ? 'porteActive3' : 'porteInacive'}></div>
+      <div className={props.detect ? 'porteActive4' : 'porteInacive'}></div>
+      <section className="robotAlign">
+        <img src={props.image} className="robotPerseverance" />
+        <section className="robotFlex">
+          <p className="robotDescription">{props.description}</p>
+          <figure className="robotFigure">
+            <img src={props.robot} className="robotAvatar" />
+            <figcaption className="robotDamien">{props.avatar}</figcaption>
+          </figure>
+        </section>
+      </section>
+      <button className={props.end ? 'robotBackpage' : 'robotBackpageoff'} onClick={backPage}>
+        retour
+      </button>
+    </div>
+  );
 }
 
-export default Robot
+export default Robot;

@@ -1,25 +1,61 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import './Uranus.css';
+import Header from './component/Header';
+import Culture from './component/Culture.jsx';
 import Journal from './component/journal';
 import Meteo from './component/Meteo';
-
-import logo from './logo.png';
+import ALaUne from './component/ALaUne';
+import Nav from './component/Nav';
+import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 import './Mars.css';
 import Robot from './component/Robot';
+import Footer from './component/Footer';
 
 import './App.css';
 
 function App() {
+  const [maPorte, setMaPorte] = useState(false);
+
+  const robotInfo = [
+    {
+      image: './src/perseverance-NASA-.jpg',
+      description:
+        "Perseverance, nicknamed Percy, is a car-sized Mars rover designed to explore the Jezero crater on Mars as part of NASA's Mars 2020 mission.",
+      robot: 'https://robohash.org/alien',
+      avatar: 'Avatar of Perseverance',
+      end: false,
+    },
+    {
+      image: './src/ingenuity.jpg',
+      description: "Ingenuity is a small robotic solar helicopter operating on Mars as part of NASA's Mars 2020 mission.",
+      robot: 'https://robohash.org/robot',
+      avatar: 'Avatar of Ingenuity',
+      end: true,
+    },
+  ];
+
   return (
     <div>
-      {/* <Journal semaine={['lundi', '2021/05/03']} />
-      <Journal semaine={['mardi', '2021/05/04']} />
-      <Journal semaine={['mercredi', '2021/05/05']} />
-      <Journal semaine={['jeudi', '2021/05/06']} />
-      <Journal semaine={['vendredi', '2021/05/07']} />
-      <Journal semaine={['samedi', '2021/05/08']} />
-      <Journal semaine={['dimanche', '2021/05/09']} />
-      <Robot /> 
-  <Meteo />*/}
+      <Header />
+      <Nav />
+      <Switch>
+        <Route exact path="/">
+          <ALaUne {...robotInfo} maPorte={maPorte} />
+        </Route>
+        <Route path="/Culture">
+          <Culture />
+        </Route>
+        <Route path="/Meteo">
+          <Meteo />
+        </Route>
+        <Route path="/Robot">
+          {robotInfo.map((text) => (
+            <Robot {...text} setMaPorte={setMaPorte} />
+          ))}
+        </Route>
+      </Switch>
+      <Footer />
+      
     </div>
   );
 }
