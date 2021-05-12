@@ -1,6 +1,7 @@
 import React from 'react';
 import './Meteo.css';
 
+
 function Meteo() {
   return (
     <div className="meteoAll">
