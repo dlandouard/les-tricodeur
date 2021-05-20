@@ -50,7 +50,7 @@
   justify-content: space-between;
   align-items: center;
   height: 50vh;
-  background-image: url('./src/ciel-etoile.jpg');
+  background: url('/image/ciel_etoile.jpg');
   background-attachment: fixed;
 }
 
@@ -73,7 +73,7 @@
 }
 
 .ALaUnebackgroung {
-  background-image: url('./src/ciel-etoile.jpg');
+  background: url('/image/ciel_etoile.jpg');
   background-attachment: fixed;
   color: white;
   padding: 0.5rem 0 2.5rem 0;

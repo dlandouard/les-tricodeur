@@ -24,7 +24,7 @@
 } 
 
 .meteoAll {
-    background-image: url('./src/ciel-etoile.jpg');
+    background-image: url('/image/ciel_etoile.jpg');
     background-size: cover;
     height: 100%;
     padding: 1rem 0 2.5rem 0;

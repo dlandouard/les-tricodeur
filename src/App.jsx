@@ -18,7 +18,7 @@ function App() {
 
   const robotInfo = [
     {
-      image: './src/perseverance-NASA-.jpg',
+      image: './image/perseverance-NASA-.jpg',
       description:
         "Perseverance, nicknamed Percy, is a car-sized Mars rover designed to explore the Jezero crater on Mars as part of NASA's Mars 2020 mission.",
       robot: 'https://robohash.org/alien',
@@ -26,7 +26,7 @@ function App() {
       end: false,
     },
     {
-      image: './src/ingenuity.jpg',
+      image: './image/ingenuity.jpg',
       description: "Ingenuity is a small robotic solar helicopter operating on Mars as part of NASA's Mars 2020 mission.",
       robot: 'https://robohash.org/robot',
       avatar: 'Avatar of Ingenuity',

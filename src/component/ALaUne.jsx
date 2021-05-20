@@ -4,7 +4,7 @@ import Journal from './journal';
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 import { useHistory } from 'react-router-dom';
 
-function aLaUne(props) {
+function ALaUne(props) {
   const [detect, setDetect] = useState(true);
 
   useEffect(() => {
@@ -65,4 +65,4 @@ function aLaUne(props) {
   );
 }
 
-export default aLaUne;
+export default ALaUne;

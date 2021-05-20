@@ -77,7 +77,7 @@ function Meteo() {
       </section>
 
       <div className="meteoEncadre">
-        <img alt="Ingenuity fourth flight" src="./src/ingenuity_fourth_flight.gif" className="meteoRover ingenuityMeteo" />
+        <img alt="Ingenuity fourth flight" src="./image/ingenuity_fourth_flight.gif" className="meteoRover ingenuityMeteo" />
       </div>
     </div>
   );

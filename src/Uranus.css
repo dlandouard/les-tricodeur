@@ -43,7 +43,7 @@ a{
 .culture_Movies,
 .culture_Horoscope {
   padding-top: 2em;
-  background: url(./ciel-etoile.jpg) no-repeat;
+  background: url('/image/ciel_etoile.jpg') no-repeat;
   border-radius: 5px;
 }
 

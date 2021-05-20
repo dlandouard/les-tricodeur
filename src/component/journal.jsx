@@ -24,7 +24,6 @@ function Journal(props) {
         setActive(!active);
       });
   }, []);
-  console.log(random2);
   return (
     <div>
       {active && (

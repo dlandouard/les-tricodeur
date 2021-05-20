@@ -20,8 +20,6 @@ function Robot(props) {
   const backPage = () => {
     setPorte(!porte);
   };
-  console.log(props);
-  console.log(props.setMaPorte);
   return (
     <div className="robotContainer">
       <div className={porte ? 'porteActive' : 'porteInacive'}></div>
@@ -29,11 +27,11 @@ function Robot(props) {
       <div className={props.detect ? 'porteActive3' : 'porteInacive'}></div>
       <div className={props.detect ? 'porteActive4' : 'porteInacive'}></div>
       <section className="robotAlign">
-        <img src={props.image} className="robotPerseverance" />
+        <img src={props.image} className="robotPerseverance" alt="robot Perseverance" />
         <section className="robotFlex">
           <p className="robotDescription">{props.description}</p>
           <figure className="robotFigure">
-            <img src={props.robot} className="robotAvatar" />
+            <img src={props.robot} className="robotAvatar" alt="robot1 avatar" />
             <figcaption className="robotDamien">{props.avatar}</figcaption>
           </figure>
         </section>
